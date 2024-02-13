@@ -8,9 +8,9 @@ Il ajoute un message en embeds dans le salon où vous tapez la commande et édit
 
 Le code est documenté mais vous devez modifier 3 variables :  
 
-TOKEN = 'VOTRE_TOKEN_ICI' ([*Token à créer ici*](https://discord.com/developers/applications "Token à créer ici"))
-CHANNEL_ID_TEMPO = 'ID_DU SALON POUR LA COULEUR DU JOUR'
-CHANNEL_ID_LEND = 'ID_DU SALON POUR LA COULEUR DU LENDEMAIN'
+- TOKEN = 'VOTRE_TOKEN_ICI' ([*Token à créer ici*](https://discord.com/developers/applications "Token à créer ici"))
+- CHANNEL_ID_TEMPO = 'ID_DU SALON POUR LA COULEUR DU JOUR'
+- CHANNEL_ID_LEND = 'ID_DU SALON POUR LA COULEUR DU LENDEMAIN'
 
 Les IDs se trouve sur [votre client Discord en mode développeur](https://support.discord.com/hc/fr/articles/206346498-O%C3%B9-trouver-l-ID-de-mon-compte-utilisateur-serveur-message "votre client Discord en mode développeur")
 
