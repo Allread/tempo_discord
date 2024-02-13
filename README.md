@@ -17,11 +17,10 @@ Le code est documenté mais vous devez modifier 3 variables :
 Les IDs se trouve sur [votre client Discord en mode développeur](https://support.discord.com/hc/fr/articles/206346498-O%C3%B9-trouver-l-ID-de-mon-compte-utilisateur-serveur-message "votre client Discord en mode développeur")
 
 ### Images
-![](https://github.com/Allread/tempo_discord/blob/main/screens/salon.png?raw=true)
+![](https://github.com/Allread/tempo_discord/blob/main/screens/screen3.png?raw=true)
 
 ![](https://github.com/Allread/tempo_discord/blob/main/screens/edit_salon.png?raw=true)
 
-![](https://github.com/Allread/tempo_discord/blob/main/screens/screen3?raw=true)
 
 ### A venir
 - Lancement automatique à une heure précise
