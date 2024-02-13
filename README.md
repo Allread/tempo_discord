@@ -4,6 +4,8 @@
 Bot permettant l affichage de la couleur **TEMPO** du jour et celui du lendemain.
 Il ajoute un message en embeds dans le salon où vous tapez la commande et édite le texte de 2 salons également.
 
+Le bot ne demande que 2 autorisations particulières : GERER LES MESSAGES *(pour éditer ses messages)* et GERER LES SALONS *(pour éditer les noms des salons)*
+
 ### Variables
 
 Le code est documenté mais vous devez modifier 3 variables :  
