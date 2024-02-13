@@ -1,0 +1,4 @@
+discord.py
+BeautifulSoup
+requests
+bs4
