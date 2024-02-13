@@ -8,7 +8,7 @@ import datetime
 intents = discord.Intents.default()
 intents.message_content = True  # Pour les événements de messages
 
-TOKEN = 'MTIwMzgzMjIyODY1Mjc4MTU4OA.G3MJJ8.oizuGS2jpZt4PtgIVCfj_OT7WGoGOeSWfPK7NA'
+TOKEN = 'TOKEN ICI'
 CHANNEL_ID_TEMPO = '1206593461382553633'  # ID du salon pour la couleur du jour
 CHANNEL_ID_LEND = '1206870641316339712'  # ID du salon pour la couleur du lendemain
 
