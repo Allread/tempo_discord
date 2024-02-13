@@ -21,6 +21,8 @@ Les IDs se trouve sur [votre client Discord en mode développeur](https://suppor
 
 ![](https://github.com/Allread/tempo_discord/blob/main/screens/edit_salon.png?raw=true)
 
+![](https://github.com/Allread/tempo_discord/blob/main/screens/screen3?raw=true)
+
 ### A venir
 - Lancement automatique à une heure précise
 - Ajout des jours restants TEMPO par couleur
