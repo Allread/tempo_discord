@@ -121,7 +121,7 @@ async def tempo(ctx):
             # Envoyer les embeds uniquement dans le channel spécifié
             await channel_to_send.send(embed=embed)
             await channel_to_send.send(embed=embed_tomorrow)
-            await channel_to_send.send(f".\n **:blue_circle: :** {bleu_restant} jours \n **:white_circle: :** {blanc_restant} jours \n **:red_circle: :** {rouge_restant} jours jusqu'au 31 mars")
+            await channel_to_send.send(f".\n **:blue_circle: :** {bleu_restant} jours restants\n **:white_circle: :** {blanc_restant} jours restants\n **:red_circle: :** {rouge_restant} jours restants jusqu'au 31 mars")
         else:
             await ctx.send("Impossible de trouver le channel avec l'ID spécifié.")
     else:
