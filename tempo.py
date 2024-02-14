@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 import requests
 from datetime import datetime, timedelta
 import locale
+import config  # Importez les variables depuis config.py
 
 # Définir la locale en français
 locale.setlocale(locale.LC_ALL, "")
@@ -12,9 +13,9 @@ locale.setlocale(locale.LC_ALL, "")
 intents = discord.Intents.default()
 intents.message_content = True  # Pour les événements de messages
 
-TOKEN = ''
-CHANNEL_ID_TEMPO = '1206593461382553633'  # ID du salon pour la couleur du jour
-CHANNEL_ID_LEND = '1206870641316339712'  # ID du salon pour la couleur du lendemain
+TOKEN: str = config.TOKEN
+CHANNEL_ID_TEMPO: str = config.CHANNEL_ID_TEMPO  # ID du salon pour la couleur du jour
+CHANNEL_ID_LEND: str = config.CHANNEL_ID_LEND  # ID du salon pour la couleur du lendemain
 
 # Mapping des couleurs en français
 COULEURS_FRANCAISES = {
