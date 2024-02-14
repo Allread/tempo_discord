@@ -8,7 +8,9 @@ Le bot ne demande que 2 autorisations particulières : GERER LES MESSAGES *(pour
 
 ### Variables
 
-Le code est documenté mais vous devez modifier 3 variables :  
+Le code est documenté mais vous devez modifier 3 variables dans le fichier config.py :  
+
+- Renommer le fichier **config.py.exemple** en **config.py**
 
 - TOKEN = 'VOTRE_TOKEN_ICI' ([*Token à créer ici*](https://discord.com/developers/applications "Token à créer ici"))
 - CHANNEL_ID_TEMPO = 'ID_DU SALON POUR LA COULEUR DU JOUR'
