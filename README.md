@@ -12,9 +12,11 @@ Le code est documenté mais vous devez modifier 3 variables dans le fichier conf
 
 - Renommer le fichier **config.py.exemple** en **config.py**
 
-- TOKEN = 'VOTRE_TOKEN_ICI' ([*Token à créer ici*](https://discord.com/developers/applications "Token à créer ici"))
-- CHANNEL_ID_TEMPO = 'ID_DU SALON POUR LA COULEUR DU JOUR'
-- CHANNEL_ID_LEND = 'ID_DU SALON POUR LA COULEUR DU LENDEMAIN'
+- TOKEN = 'Le token du bot discord' ([*Token à créer ici*](https://discord.com/developers/applications "Token à créer ici"))
+- CHANNEL_ID_TEMPO = 'id du salon J0 pour modifier le titre du salon'
+- CHANNEL_ID_LEND = 'id du salon J+1 pour modifier le titre du salon'
+- CHANNEL_ID_ENVOI = 'id du salon pour récuperer les envoi des jours'
+- HEURE_LANCEMENT = 'l'heure à laquelle le bot se lance se mettre à jour'
 
 Les IDs se trouve sur [votre client Discord en mode développeur](https://support.discord.com/hc/fr/articles/206346498-O%C3%B9-trouver-l-ID-de-mon-compte-utilisateur-serveur-message "votre client Discord en mode développeur")
 
