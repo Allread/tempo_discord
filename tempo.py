@@ -14,10 +14,12 @@ locale.setlocale(locale.LC_ALL, "")
 intents = discord.Intents.default()
 intents.message_content = True  # Pour les événements de messages
 
+# GERER LES VARIABLES DU CONFIG.PY
 TOKEN: str = config.TOKEN
-CHANNEL_ID_TEMPO: str = config.CHANNEL_ID_TEMPO  # ID du salon pour la couleur du jour
-CHANNEL_ID_LEND: str = config.CHANNEL_ID_LEND  # ID du salon pour la couleur du lendemain
+CHANNEL_ID_TEMPO: str = config.CHANNEL_ID_TEMPO
+CHANNEL_ID_LEND: str = config.CHANNEL_ID_LEND
 CHANNEL_ID_ENVOI: str = config.CHANNEL_ID_ENVOI
+HEURE_LANCEMENT: str = config.HEURE_LANCEMENT
 
 # Mapping des couleurs en français
 COULEURS_FRANCAISES = {
@@ -45,7 +47,8 @@ async def on_ready():
     print(f'We have logged in as {client.user.name}')
 
 @client.command()
-async def jour(ctx):
+async def tempo(ctx):
+    await ctx.message.delete() # suprime l'appel
     # Obtenir la date du jour et du lendemain
     current_date = datetime.now().strftime('%Y-%m-%d')
     tomorrow_date = (datetime.now() + timedelta(days=1)).strftime('%Y-%m-%d')
@@ -54,20 +57,26 @@ async def jour(ctx):
     formatted_current_date = datetime.strptime(current_date, '%Y-%m-%d').strftime('%d %B %Y')
     formatted_tomorrow_date = datetime.strptime(tomorrow_date, '%Y-%m-%d').strftime('%d %B %Y')
 
-    # Construire l'URL avec les dates dynamiques
+    # On prend le swagger du poto MED :) 
     url = f"https://www.myelectricaldata.fr/rte/tempo/{current_date}/{tomorrow_date}"
+    url2 = f"https://www.myelectricaldata.fr/edf/tempo/days"
 
     # Effectuer la requête HTTP
     response = requests.get(url)
+    response2 = requests.get(url2)
 
     # Vérifier si la requête a réussi (code 200)
     if response.status_code == 200:
         # Convertir la réponse JSON en un dictionnaire Python
         data = response.json()
+        data2 = response2.json()
 
         # Séparer les dates du jour et du lendemain
         current_date_color = data.get(current_date, "N/A")
         tomorrow_date_color = data.get(tomorrow_date, "N/A")
+        rouge_restant = data2.get("red", "N/A")
+        blanc_restant = data2.get("white", "N/A")
+        bleu_restant = data2.get("blue", "N/A")
 
         # Traduire les couleurs en français
         current_date_color_fr = COULEURS_FRANCAISES.get(current_date_color, current_date_color)
@@ -112,6 +121,7 @@ async def jour(ctx):
             # Envoyer les embeds uniquement dans le channel spécifié
             await channel_to_send.send(embed=embed)
             await channel_to_send.send(embed=embed_tomorrow)
+            await channel_to_send.send(f".\n **:blue_circle: :** {bleu_restant} jours \n **:white_circle: :** {blanc_restant} jours \n **:red_circle: :** {rouge_restant} jours jusqu'au 31 mars")
         else:
             await ctx.send("Impossible de trouver le channel avec l'ID spécifié.")
     else:
