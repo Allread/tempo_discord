@@ -72,8 +72,8 @@ async def tempo(ctx):
         data2 = response2.json()
 
         # Séparer les dates du jour et du lendemain
-        current_date_color = data.get(current_date, "MODE DÉGRADÉ")
-        tomorrow_date_color = data.get(tomorrow_date, "MODE DÉGRADÉ")
+        current_date_color = data.get(current_date, "NON DISPONIBLE ACTUELLEMENT")
+        tomorrow_date_color = data.get(tomorrow_date, "NON DISPONIBLE ACTUELLEMENT")
         rouge_restant = data2.get("red", "N/A")
         blanc_restant = data2.get("white", "N/A")
         bleu_restant = data2.get("blue", "N/A")
